@@ -1,8 +1,8 @@
 {
-    "name": "maxstone",
-    "private": true,
-    "dependencies": {
-        "bootstrap4-dist": "",
-        "jquery": ""
-    }
+  "name": "maxstone",
+  "private": true,
+  "dependencies": {
+    "bootstrap4-dist": "",
+    "jquery": ""
+  }
 }
