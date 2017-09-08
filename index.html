@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MaxStone</title>
+    <link rel="icon" href="favicon.gif">
+    <style>
+    #loader {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        z-index: 9999;
+        background-color: white;
+    }
+
+    .load-bar {
+        position: relative;
+        width: 40%;
+        height: 6px;
+        background-color: #fdba2c;
+        margin: auto;
+        top: 50%;
+    }
+
+    .bar {
+        content: "";
+        display: inline;
+        position: absolute;
+        width: 0;
+        height: 100%;
+        left: 50%;
+        text-align: center;
+    }
+
+    .bar:nth-child(1) {
+        background-color: #da4733;
+        animation: loading 3s linear infinite;
+    }
+
+    .bar:nth-child(2) {
+        background-color: #3b78e7;
+        animation: loading 3s linear 1s infinite;
+    }
+
+    .bar:nth-child(3) {
+        background-color: #fdba2c;
+        animation: loading 3s linear 2s infinite;
+    }
+
+    @keyframes loading {
+        from {
+            left: 50%;
+            width: 0;
+            z-index: 100;
+        }
+        33.3333% {
+            left: 0;
+            width: 100%;
+            z-index: 10;
+        }
+        to {
+            left: 0;
+            width: 100%;
+        }
+    }
+    </style>
+    <link rel="preload" as="style" href="css/normalize.css" onload="this.rel='stylesheet'" />
+    <noscript>
+        <link rel="style" href="css/normalize.css" />
+    </noscript>
+    <link rel="preload" as="style" href="css/jquery.fullPage.css" onload="this.rel='stylesheet'" />
+    <noscript>
+        <link rel="style" href="css/jquery.fullPage.css" />
+    </noscript>
+    <link rel="preload" as="style" href="css/index.css" onload="this.rel='stylesheet'" />
+    <noscript>
+        <link rel="style" href="css/index.css" />
+    </noscript>
+    <script type="text/javascript">
+    ["js/jquery-3.2.1.slim.min.js", "js/loadCSS.js", "js/cssrelpreload.js", "js/webfont.js", "js/jquery.fullPage.js", "js/index.js"].forEach(function(b) {
+        var a = document.createElement("script");
+        a.src = b;
+        a.async = !1;
+        document.head.appendChild(a)
+    });
+    </script>
+</head>
+
+<body>
+    <div id="top"></div>
+    <div id="fullpage">
+        <div class="section " id="section0" data-anchor="part1">
+                    <h1><b>Max</b>Stone</h1>
+                    <img src="img/header.png">
+                    <p>
+                        <br>Combine the MaxStone Wireless Camera Remote with a compatible iPhone, iPod, or iPad to control your camera's shutter.
+                        <br>
+                        <br>Able to work with many popular cameras, the MaxStone is a versatile trigger.
+                        <br>
+                        <br>It attaches to your camera's strap loop so it can hang over the infrared sensor.
+                        <br>
+                        <br>
+                        <button id="buy" class="btn white"><b>$35</b> BUY NOW</button>
+                        <br>
+                    </p>
+            </div>
+        <div class="section " id="section1" data-anchor="part2">
+            <div class="row header">
+                <div class="col-md-12">
+                    <h2>MaxStone Wireless Camera Remote</h2>
+                    <p> for DSLR Cameras</p>
+                </div>
+            </div>
+            <div class="col=md-8 col-md-offset-2">
+                <p>
+                    Using Bluetooth 4.0 and infrared technology, the MaxStone connects your device to your camera, allowing you to remotely control the camera's shutter from up to 82' using the MaxStone iOS App. The app also allows you to track your camera, set a time-lapse, video, or bulb setting. A button on the MaxStone itself can trigger your iPhone from up to 16' away, and you can set a delay to 3, 5, 7, or 10 seconds, giving you plenty of time to prepare your selfie.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <p>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                        Quantity: <input type="number" name="quantity" value="1">
+                        <!-- Saved buttons use the "secure click" command -->
+                        <INPUT TYPE="hidden" name="cmd" value="_xclick">
+                        <INPUT TYPE="hidden" name="charset" value="utf-8">
+                        <INPUT TYPE="hidden" NAME="currency_code" value="AUD">
+                        <INPUT TYPE="hidden" NAME="amount" value="35">
+                        <INPUT TYPE="hidden" NAME="business" value="conor@codenix.org">
+                        <INPUT TYPE="hidden" NAME="item_name" value="MaxStone">
+                        <!-- Saved buttons display an appropriate button image. -->
+                        <button type="submit" id="buy" class="btn">Purchase</button>
+                    </form>
+                </p>
+            </form>
+        </div>
+    </div>
+    <div id="bottom"></div>
+</body>
+
+</html>
